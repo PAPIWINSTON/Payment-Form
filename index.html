@@ -2,17 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" integrity="sha512-5fsy+3xG8N/1PV5MIJz9ZsWpkltijBI48gBzQ/Z2eVATePGHOkMIn+xTDHIfTZFVb9GMpflF2wOWItqxAP2oLQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <title>Form</title>
 </head>
 <body>
 <!--Your Code Goes Below this line-->
+<div class="container">
+    <header class="header">
+        <h1 class="text-center" id="title">Save the Ocean Survey Form</h1>
+        <p class="description text-center" id="description">Think about all of these animals and what they are facing
+            because of this garbage, Donate now and that could change animals lives.</p>
+    </header>
+    <form id="survey-form">
+        <div class="form-group">
+            <label for="name" id="name-label">Name</label>
+            <input class="form-control" id="name" placeholder="Enter your name" required type="text">
+        </div>
+        <div class="form-group">
+            <label for="email" id="email-label">Email</label>
+            <input class="form-control" id="email" placeholder="Enter your email" required type="email">
+        </div>
+        <div class="form-group">
+            <label for="credit" id="credit-label">Credit card</label>
+            <input class="form-control" id="credit" max="9999999999999" min="1" placeholder="Enter your credit card"
+                   required type="number">
+        </div>
+        <div class="form-group">
+            <p>What State do you live in?</p>
+            <select class="form-control" id="dropdown" name="state" required>
+                <option disabled selected value>Select current state</option>
+                <option value="Massachusetts">Massachusetts</option>
+                <option value="Rhode Island">Rhode Island</option>
+                <option value="Maine">Maine</option>
+                <option value="Connecticut">Connecticut</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <p>Would you recommend Save the ocean to a friend?</p>
+            <label>
+                <input checked class="input-radio" name="user-recommend" type="radio" value="definitely">
+                Definitely
+            </label>
+            <label>
+                <input checked class="input-radio" name="user-recommend" type="radio" value="maybe">
+                Maybe
+            </label>
+            <label>
+                <input checked class="input-radio" name="user-recommend" type="radio" value="not sure">
+                Not Sure
+            </label>
 
-
+        </div>
+        <div class="form-group">
+            <button class="submit-button" id="submit" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
 <!--Your Code Goes Above this line-->
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
